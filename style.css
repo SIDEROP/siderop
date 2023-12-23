@@ -545,7 +545,7 @@ body > .box{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 22px;
     outline: none;
     text-transform: uppercase;
 }
@@ -583,7 +583,7 @@ body > .box{
     color: orange;
     font-family: "popins";
     position: relative;
-    font-size: 1.4rem;
+    font-size: 24px;
     width: 100%;
     outline: none;
     text-align: center;
@@ -742,7 +742,7 @@ body > .box{
     text-align: center;
     font-family: "popins";
     padding: 4px;
-    font-size: .9rem;
+    font-size: 14px;
     color: white;
     position: relative;
 }
@@ -764,7 +764,8 @@ body > .box{
     height: 100%;
     color: white;
     overflow: auto;
-    font-size: smaller;
+    font-size: 14px;
+    color: greenyellow;
     font-family: "popins";
     outline: none;
 }
@@ -917,13 +918,15 @@ body > .box{
         }
 
 
+
         /* ser_box */
         .boxInput{
             z-index: 2;
         }
+
         
         .boxInput .ser_box input{
-            width: 60%;
+            width: 65%;
         }
     
         #serach{
@@ -943,7 +946,7 @@ body > .box{
     
         
 
-        /* my_id */
+
         .my_id{
             width: 90%;
             min-height: 400px;
@@ -961,13 +964,19 @@ body > .box{
             html,body{
                 font-size: 6px;
             }
+            .boxInput .ser_box{
+                white-space: nowrap;
+            }
+            .boxInput .ser_box input{
+                width: 60%;
+            }
 
-            /* title */
             .title{
                 text-align: center;
             }
             #edit_{
                 margin-left: 35px;
+
             }
             span#he{
                 font-size: 50px;
@@ -982,15 +991,14 @@ body > .box{
             }
 
 
-            /* end 320px */
         }
 
-          /* end 574px */
+
     }
 
 
 
-/* end 825px */
+
 
 }
 
