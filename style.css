@@ -359,18 +359,17 @@ body > .box{
 #loop_title{
     background: url("./video/img.jpg");
     width: fit-content;
-    position: absolute;
+    position: fixed;
     -webkit-background-clip: text;
     display: inline-block;
     white-space: nowrap;
-    position: absolute;
     top: 0;
     right: 0;
     writing-mode: vertical-rl;
     z-index: 1;
     overflow: hidden;
     animation: loop 8s linear infinite;
-    user-select: none   ;
+    user-select: none;
 }
 
 @keyframes loop {
@@ -391,25 +390,6 @@ body > .box{
     font-size: 200px;
     word-spacing: 90px;
 }
-
-/* #loop_title h1 span{
-    animation: looppacity 1s linear infinite;
-}
-
-@keyframes looppacity {
-    0%{
-        opacity: .3;
-    }
-    25%{
-        opacity: .5;
-    }
-    50%{
-        opacity: .7;
-    }
-    100%{
-        opacity: 1;
-    }
-} */
 
 #loop_title span:hover{
     color: white;
@@ -964,45 +944,57 @@ body > .box{
             min-width: 100%;
         }
 
+
+        #loop_title{
+            right: -75px;
+        }
+        
+
         #close{
             font-size: 37px;
         }
 
 
-        /* end 320px */
-        @media only screen and (max-width: 321px) {
+        /* end 450px */
+        @media only screen and (max-width: 450px) {
 
-            html,body{
-                font-size: 6px;
-            }
-            .boxInput .ser_box{
-                white-space: nowrap;
-            }
-            .boxInput .ser_box input{
-                width: 60%;
-            }
 
-            #serach{
-                transform: translate(0,130%);
-                font-size: 12px;
-            }
 
-            .title{
-                text-align: center;
-            }
-            #edit_{
-                margin-left: 35px;
 
-            }
-            span#he{
-                font-size: 50px;
-                right: -85px;
-                top: -26px;
-            }
-        
-            @keyframes heart {
-                50%{
-                    font-size: 60px;
+
+            @media only screen and (max-width: 321px) {
+                html,body{
+                    font-size: 6px;
+                }
+                .boxInput .ser_box{
+                    white-space: nowrap;
+                }
+                .boxInput .ser_box input{
+                    width: 60%;
+                }
+    
+                #serach{
+                    transform: translate(0,130%);
+                    font-size: 12px;
+                }
+    
+                .title{
+                    text-align: center;
+                }
+                #edit_{
+                    margin-left: 35px;
+    
+                }
+                span#he{
+                    font-size: 50px;
+                    right: -85px;
+                    top: -26px;
+                }
+            
+                @keyframes heart {
+                    50%{
+                        font-size: 60px;
+                    }
                 }
             }
 
