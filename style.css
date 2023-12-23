@@ -198,6 +198,7 @@ body > .box{
     overflow: hidden;
     outline: none;
     text-transform: uppercase;
+    text-align: center;
 }
 
 @keyframes title {
