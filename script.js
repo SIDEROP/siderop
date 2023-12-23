@@ -35,6 +35,9 @@ window.addEventListener('mousemove',(e)=>{
     document.getElementById("big_pointer").style.left = `${e.x - 90}px`
     document.getElementById("big_pointer").style.top = `${e.y - 90}px`
 
+    document.getElementById("big_pointer3d").style.left = `${e.x - 500}px`
+    document.getElementById("big_pointer3d").style.top = `${e.y - 500}px`
+
 })
 
 
@@ -62,8 +65,6 @@ let importImg = document.querySelector("#edit_pic input")
 document.querySelector("#edit_pic input").addEventListener('change',()=>{
     document.querySelector("#profile img").src = URL.createObjectURL(importImg.files[0])
 })
-
-
 
 
 

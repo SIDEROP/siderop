@@ -147,6 +147,15 @@ body > .box{
     transition: all 0.3s ease;
 }
 
+.boxInput .ser_box i.bx-search-alt-2{
+    display: none;
+}
+
+.boxInput .ser_box input:valid ~ #ser,
+.boxInput .ser_box input:focus ~ #ser{
+    display: inline-flex;
+}
+
 
 
 
@@ -785,6 +794,12 @@ body > .box{
     display: none;
 }
 
+#close:hover{
+    opacity: 1;
+    background-color: white;
+    color: black;
+}
+
 #profile:hover #close{
     display: flex;
 }
@@ -856,6 +871,17 @@ body > .box{
     top: 0;
     left: 0;
     background-color: black;
+}
+
+#big_pointer3d{
+    width: 888px;
+    height: 888px;
+    background: linear-gradient(236.22deg,#ff3c47 -3.32%,#eec850 12.21%,#3257ed 73.4%);
+    filter: blur(187px);
+    border: 122px solid #d21655;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 
@@ -943,6 +969,9 @@ body > .box{
         .my_id .card{
             min-width: 100%;
         }
+        .my_id .card a i{
+            font-size: 28px;
+        }
 
 
         #loop_title{
@@ -1003,9 +1032,6 @@ body > .box{
 
 
     }
-
-
-
 
 
 }
