@@ -925,24 +925,30 @@ body > .box{
             z-index: 2;
         }
 
-        
+        .boxInput .ser_box i.bxl-google{
+            font-size: 30px;
+            margin-left: 8px;
+        }
         .boxInput .ser_box input{
             width: 65%;
         }
     
         #serach{
             left: 50px;
-            transform: translate(0,170%);
+            font-size: 14px;
+            transform: translate(0,100%);
         }
     
         .boxInput .ser_box i.bx-search-alt-2,
         .boxInput .ser_box i.bx-microphone{
-            top: 2px;
+            top: 9px;
+            font-size: 30px;
+            padding: 0;
         }
     
         .boxInput .ser_box input:valid ~ #serach,
         .boxInput .ser_box input:focus ~ #serach{
-            transform: translate(0,-6px);
+            transform: translate(0,1px);
         }
     
         
@@ -958,9 +964,13 @@ body > .box{
             min-width: 100%;
         }
 
+        #close{
+            font-size: 37px;
+        }
+
 
         /* end 320px */
-        @media only screen and (max-width: 320px) {
+        @media only screen and (max-width: 321px) {
 
             html,body{
                 font-size: 6px;
@@ -970,6 +980,11 @@ body > .box{
             }
             .boxInput .ser_box input{
                 width: 60%;
+            }
+
+            #serach{
+                transform: translate(0,130%);
+                font-size: 12px;
             }
 
             .title{
