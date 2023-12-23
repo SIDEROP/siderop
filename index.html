@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="video_box">
+        <video src="video/video.mp4" autoplay muted loop></video>
+        <div id="pointer" class="pointer"></div>
+        <div id="big_pointer"></div>
+    </div>
+    <main class="box">
+
+        <div class="title">
+            <h1>
+                <div contenteditable="" id="edit_">I Love Coding </div>
+                <span id="he" >❤️</span>
+            </h1>
+        </div>
+
+        <div class="boxInput">
+            <div class="ser_box">
+                <span></span>
+                <i class='bx bxl-google'></i>
+                <input id="text" type="text" required> 
+                <span id="serach">Search</span>
+                <i id="ser" class='bx bx-search-alt-2' ></i>
+                <i class='bx bx-microphone' ></i>
+            </div>
+        </div>
+        
+        <main class="my_id">
+
+            <div class="card">
+                <a href="https://open.spotify.com/">
+                    <i class='fa-brands fa-spotify' style="color: green;"></i>
+                    <div class="name">
+                        <h4>Spotify</h4>
+                        <h5>Spotify.com/@siderop</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://www.netflix.com/in/">
+                    <i style="padding: 0; height:24px; display: flex;"><img src="https://iili.io/HMIU1g2.png" style="height: 24px; width: 24px;"></i>
+                    <div class="name">
+                        <h4>Netflix</h4>
+                        <h5>Netflix.com/@siderop</h5>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="card">
+                <a href="https://www.youtube.com/">
+                    <i class='fa-brands fa-youtube' style="color: red;"></i>
+                    <div class="name">
+                        <h4>youtube</h4>
+                        <h5>youtube.com/@siderop</h5>
+                    </div>
+                </a>
+            </div>
+            
+
+            <div class="card">
+                <a href="https://chat.openai.com/">
+                    <i style="display: flex;"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/chatgpt-icon.png" style="height: 28px; width: 28px;"></i>
+                    <div class="name">
+                        <h4>Chatgpt</h4>
+                        <h5>Chatgpt.com/@siderop</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://www.xbox.com/en-IN/">
+                    <i class='fa-brands fa-xbox' style="color: green;"></i>
+                    <div class="name">
+                        <h4>Xbox</h4>
+                        <h5>Xbox.com/@siderop</h5>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="card">
+                <a href="https://codepen.io/">
+                    <i class='fa-brands fa-codepen' style="color: #1E8FD9;"></i>
+                    <div class="name">
+                        <h4>Codepen</h4>
+                        <h5>Codepen.io/@siderop</h5>
+                    </div>
+                </a>
+            </div>
+
+        </main>
+
+
+        <section id="loop_title">
+            <h1>
+                <span>EAT.</span>
+                <span>SLEEP. </span>
+                <span>CODE.</span>
+                <span>REPEAT.</span>
+            </h1>
+        </section>
+        
+        <!-- profile -->
+        <section id="profile" class="active">
+            <div class="pic_box">
+                <img draggable="false" src="./video/profile.png">
+                <i class='bx bx-upload' id="edit_pic">
+                    <input type="file" >
+                </i>
+            </div>
+            <!-- <h1 id="hello">HELLO</h1> -->
+            <div class="pro_name">
+                <p id="status" contenteditable="true">Full Stack Developer</p>
+                <h1 id="name" contenteditable class="name_">SIDEROP</h1>
+            </div>
+            
+            <!-- social media -->
+            <div id="social">
+
+                <div class="tool">
+                    <div class="tool_kit Linkedin">Linkedin</div>
+                    <div class="tool_kit Github">Github</div>
+                    <div class="tool_kit Instagram">Instagram</div>
+                    <div class="tool_kit fb Twitter">Twitter</div>
+                </div>
+
+                <span>
+                    <i class='bx bxl-linkedin' ><a href="https://in.linkedin.com/"></a></i>
+                </span>
+                <span>
+                    <i class='bx bxl-github' ><a href="https://github.com/"></a></i>
+                </span>
+                <span>
+                    <i class='bx bxl-instagram' ><a href="https://www.instagram.com/"></a></i>
+                </span>
+                <span>
+                    <i class='bx bxl-twitter'></i>
+                </span>
+            </div>
+
+
+            <!-- Advanced Notepad -->
+            <section id="adv_note">
+                <div class="adv_title">
+                    <h1>Advanced Notepad</h1>
+                </div>
+                <div contenteditable="true" class="text_note" id="note_">
+                    Note Something Down...
+                </div>
+            </section>
+
+            <div id="close">></div>
+        </section >
+
+
+
+    </main>
+
+    
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src='https://codepen.io/Hyperplexed/pen/xxYJYjM/54407644e24173ad6019b766443bf2a6.js'></script>
+    <script src="script.js"></script>
+</body>
+</html>
