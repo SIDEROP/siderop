@@ -933,10 +933,10 @@ body > .box{
 
         .boxInput .ser_box i.bxl-google{
             font-size: 30px;
-            margin-left: 8px;
+            left: 1px;
         }
         .boxInput .ser_box input{
-            width: 65%;
+            width: 200px;
         }
     
         #serach{
@@ -999,7 +999,12 @@ body > .box{
                     white-space: nowrap;
                 }
                 .boxInput .ser_box input{
-                    width: 60%;
+                    width: 150px;
+                }
+
+                main.my_id{
+                    height: 210px;
+                    min-height: 30%;
                 }
     
                 #serach{
