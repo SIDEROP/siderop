@@ -481,17 +481,7 @@ body > .box{
     display: flex;
 }
 
-@keyframes back {
-    0%{
-        background: conic-gradient(rgba(255, 0, 0, 0.709),rgba(255, 255, 255, 0.687),rgba(0, 0, 255, 0.665),rgba(0, 128, 0, 0.709),rgba(255, 166, 0, 0.575)90%);
-    }
-    50%{
-        background:none;
-    }
-    100%{
-        background: conic-gradient(rgba(255, 0, 0, 0.709),rgba(255, 255, 255, 0.687),rgba(0, 0, 255, 0.665),rgba(0, 128, 0, 0.709),rgba(255, 166, 0, 0.575)90%);
-    }
-}
+
 
 #profile .pic_box img{
     width: 190px;

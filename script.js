@@ -41,31 +41,41 @@ window.addEventListener('mousemove',(e)=>{
 })
 
 
-
 // localStorage
 
-let localStor = (pos,dataName,default_)=>{
+let localStor = (pos, dataName, default_) => {
+    const element = document.getElementById(pos);
+    if (!element) return;
 
-    document.getElementById(pos).addEventListener('input',()=>{
-        let noteData = document.getElementById(pos).innerHTML
-        localStorage.setItem(dataName,noteData ?? default_)
-    })
-    document.getElementById(pos).innerHTML = localStorage.getItem(dataName)
+    element.addEventListener('input', () => {
+        const noteData = element.innerHTML;
+        localStorage.setItem(dataName, noteData || default_);
+    });
+
+    const savedData = localStorage.getItem(dataName);
+    element.innerHTML = savedData !== null ? savedData : default_;
 }
 
-localStor('edit_','text',"I Love Coding")
-localStor('note_',"noteData","Note Something Down...")
-localStor('status','status',"Full Stack Developer")
-localStor("name","name","SIDEROP")
+localStor('edit_', 'text', "I Love Coding");
+localStor('note_', "noteData", "Note Something Down...");
+localStor('status', 'status', "Full Stack Developer"); 
+localStor("name", "name", "SIDEROP");
 
 
-
-// uplodeImg
+// uploadImg
 let importImg = document.querySelector("#edit_pic input")
-document.querySelector("#edit_pic input").addEventListener('change',()=>{
-    document.querySelector("#profile img").src = URL.createObjectURL(importImg.files[0])
+document.querySelector("#edit_pic input").addEventListener('change', () => {
+    const file = importImg.files[0];
+    const imgUrl = URL.createObjectURL(file);
+    document.querySelector("#profile img").src = imgUrl;
+    localStorage.setItem('profileImage', imgUrl);
 })
 
+// Load saved image on page load
+const savedImage = localStorage.getItem('profileImage');
+if (savedImage) {
+    document.querySelector("#profile img").src = savedImage;
+}
 
 
 
