@@ -47,17 +47,24 @@ let localStor = (pos, dataName, default_) => {
     const element = document.getElementById(pos);
     if (!element) return;
 
-    // Add input event listener
+    // Get saved data from localStorage
+    const savedData = localStorage.getItem(dataName);
+    if (!savedData) {
+        // If no saved data, set default value
+        localStorage.setItem(dataName, default_);
+        element.innerHTML = default_;
+    } else {
+        // Load saved data
+        element.innerHTML = savedData;
+    }
+
+    // Update localStorage on input
     element.addEventListener('input', () => {
-        const noteData = element.innerHTML;
-        localStorage.setItem(dataName, noteData || default_);
+        const inputValue = element.innerHTML;
+        localStorage.setItem(dataName, inputValue);
     });
 
-    // Load saved data or use default
-    const savedData = localStorage.getItem(dataName);
-    element.innerHTML = savedData !== null ? savedData : default_;
-
-    // Add user input handler
+    // Handle Enter key
     element.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -69,8 +76,8 @@ let localStor = (pos, dataName, default_) => {
 // Default values
 const defaults = {
     edit_: "I Love Coding",
-    note_: "Note Something Down...", 
-    status: "Full Stack Developer",
+    note_: "Note Something Down...",
+    status: "Full Stack Developer", 
     name: "SIDEROP"
 };
 
