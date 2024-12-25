@@ -47,19 +47,37 @@ let localStor = (pos, dataName, default_) => {
     const element = document.getElementById(pos);
     if (!element) return;
 
+    // Add input event listener
     element.addEventListener('input', () => {
         const noteData = element.innerHTML;
         localStorage.setItem(dataName, noteData || default_);
     });
 
+    // Load saved data or use default
     const savedData = localStorage.getItem(dataName);
     element.innerHTML = savedData !== null ? savedData : default_;
+
+    // Add user input handler
+    element.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            element.blur();
+        }
+    });
 }
 
-localStor('edit_', 'text', "I Love Coding");
-localStor('note_', "noteData", "Note Something Down...");
-localStor('status', 'status', "Full Stack Developer"); 
-localStor("name", "name", "SIDEROP");
+// Default values
+const defaults = {
+    edit_: "I Love Coding",
+    note_: "Note Something Down...", 
+    status: "Full Stack Developer",
+    name: "SIDEROP"
+};
+
+// Initialize all elements
+Object.entries(defaults).forEach(([id, defaultValue]) => {
+    localStor(id, id, defaultValue);
+});
 
 
 // uploadImg
